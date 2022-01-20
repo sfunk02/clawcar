@@ -25,6 +25,8 @@ p1 = [1184, 977, 2239]
 p2 = [1173, 1008, 1124, 1034, 1122]
 p3 = [1185, 976, 3324]
 p4 = [1119, 1039, 1170, 2067, 1142]
+p5 = [1212, 970, 2227, 1011, 1140]
+p6 = [1089, 1096, 1056, 1103, 2163]
 
 print('IR listener')
 def fuzzy_pulse_compare(pulse1, pulse2, fuzzyness=0.2):
@@ -78,3 +80,7 @@ while True:
         print('3')
     if fuzzy_pulse_compare(p4, detected):
         print('4')
+    if fuzzy_pulse_compare(p5, detected):
+        print('5')
+    if fuzzy_pulse_compare(p6, detected):
+        print('6')
