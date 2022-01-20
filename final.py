@@ -3,8 +3,9 @@ import pulseio
 import adafruit_irremote
 import motor
 import pwmio
-import time
 import servo
+pwm = pulseio.PWMOut(board.D8, frequency=50)
+myServo = servo.Servo(pwm, min_pulse=750, max_pulse=2250)
 A1 = board.D4
 A2 = board.D5
 pwmA1 = pwmio.PWMOut(A1, frequency=50)
@@ -74,6 +75,7 @@ while True:
         print("  throttle:", motor2.throttle)
     if fuzzy_pulse_compare(p1, detected):
         print('1')
+        myServo.angle = 0
     if fuzzy_pulse_compare(p2, detected):
         print('2')
     if fuzzy_pulse_compare(p3, detected):
