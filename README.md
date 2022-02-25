@@ -89,8 +89,9 @@ Now you use if statements and your compare function to set the condtion that if 
 storage as well as timers being used up. I fixed these issues by clearing out everything in my Metro except what I needed to use right then, and by adding de initialize 
 functions in my buttons. The motors are initialized not at the beginning of the code but in an if statement, because not all of the pwm I used could work at once. Up, left down 
 and right all have intialize functions in them with the ok button being a hard stop and deinitialize for all the motors. The servos initialize and deinitialize everytime they 
-are given a command. When it all came together it looked like this
-''' pyhton
+are given a command. When it all came together it looked like this:
+
+``` pyhton
 import pulseio
 import board
 import adafruit_irremote
