@@ -22,11 +22,19 @@ Inital problems we faced in planning our project were deciding whether to contro
 
 [Onshape Document](https://cvilleschools.onshape.com/documents/68aa0f638d08d1c7e2145037/w/4b7c45ff2284ca1a7005927c/e/dc6fd3a74e3c54772968f738)
 
+The first piece of this CAD project was to design a rack and pinion for the claw to open and close by a 180 servo. In order to create it, I used a spur gear function on Onshape, and then designed a gear rack off of the geometry of the gear. Using a rack and pinion mate allowed the gear to turn while the rack moved back and forth. Lastly, walls to mount the rack onto were designed, with a hole on one side to connect the servo.
+
 <img src="Images/RackandPinion.png" alt="RackandPinion" width="400" height="150"/>
 
-<img src="Images/Bracket.png" alt="Bracket" width="400" height="300"/>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The next piece of the project was designing the claw fingers, which are pieces of gear with curved grab fingers (Shown below).
 
 <img src="Images/ClawFingers.png" alt="ClawFingers" width="250" height="450"/>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<img src="Images/Bracket.png" alt="Bracket" width="400" height="300"/>
 
 <img src="Images/Claw_full_arm.png" alt="Claw_full_arm" width="400" height="130"/>
 
