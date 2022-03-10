@@ -30,7 +30,7 @@ The first piece of this CAD project was to design a rack and pinion for the claw
 
 The next piece of the project was designing the claw fingers, which are pieces of gear with curved grab fingers (Shown below). These fingers have gears on the back end, which connect to a cylindrical gear rack on the end of the rack and pinion assembly. This was designed after a wine bottle opener.
 
-<img src="Images/ClawFingers.png" alt="ClawFingers" width="250" height="450"/> <img src="Images/bottleOpener.png" alt="BottleOpener" width="250" height="450"/>
+<img src="Images/ClawFingers.png" alt="ClawFingers" width="250" height="450"/> <img src="Images/bottleOpener.png" alt="BottleOpener" width="450" height="450"/>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
