@@ -34,15 +34,23 @@ The next piece of the project was designing the claw fingers, which are pieces o
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+This bracket was somewhat difficult to design, because it had to be able to hold the three claw fingers in a circular orientation split evenly around a circle. Additionally, the square hole in the center had to be offset to account for the offset of the rack attached to the micro-servo.
+
 <img src="Images/Bracket.png" alt="Bracket" width="400" height="300"/>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <img src="Images/Claw_full_arm.png" alt="Claw_full_arm" width="400" height="130"/>
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <img src="Images/Car_Base.png" alt="Car_Base" width="380" height="220"/>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <img src="Images/Full_car.png" alt="Full_car" width="400" height="300"/>
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Code
 
