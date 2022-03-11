@@ -40,13 +40,19 @@ This bracket was somewhat difficult to design, because it had to be able to hold
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+This image shows the upper arm and claw assembly, which includes a gear at the elbow that uses a belt to connect to a servo on the car base.
+
 <img src="Images/Claw_full_arm.png" alt="Claw_full_arm" width="400" height="130"/>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+This is the car base rendered in CAD, complete with screw holes, batter holders, motor mounts, servos, and switches.
+
 <img src="Images/Car_Base.png" alt="Car_Base" width="380" height="220"/>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This is the completed car, arm, and claw rendered in CAD. It does not show the motors and belts because we could not find them in the parts folder we have access to.
 
 <img src="Images/Full_car.png" alt="Full_car" width="400" height="300"/>
 
