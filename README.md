@@ -25,37 +25,37 @@ Inital problems we faced in planning our project were deciding whether to contro
 The first piece of this CAD project was to design a rack and pinion for the claw to open and close with a single 180 micro-servo. In order to create it, I used a spur gear function on Onshape, and then designed a gear rack off of the geometry of the gear. Using a rack and pinion mate allowed the gear to turn while the rack moved back and forth. Lastly, walls to mount the rack onto were designed, with a hole on one side to connect the servo.
 
 <img src="Images/RackandPinion.png" alt="RackandPinion" width="400" height="150"/>
-
+#### Rack and Pinion
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The next piece of the project was designing the claw fingers, which are pieces of gear with curved grab fingers (Shown below). These fingers have gears on the back end, which connect to a cylindrical gear rack on the end of the rack and pinion assembly. This was designed after a wine bottle opener.
 
 <img src="Images/ClawFingers.png" alt="ClawFingers" width="250" height="450"/> <img src="Images/bottleOpener.png" alt="BottleOpener" width="450" height="450"/>
-
+#### Claw Fingers
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This bracket was somewhat difficult to design, because it had to be able to hold the three claw fingers in a circular orientation split evenly around a circle. Additionally, the square hole in the center had to be offset to account for the offset of the rack attached to the micro-servo.
 
 <img src="Images/Bracket.png" alt="Bracket" width="400" height="300"/>
-
+#### Bracket Connector
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This image shows the upper arm and claw assembly, which includes a gear at the elbow that uses a belt to connect to a servo on the car base.
+This image shows the upper arm and claw assembly, which includes a gear at the elbow that uses a belt to connect to a servo on the car base. This belt allows for rotation of the upper arm around an axis. The lower arm bends back and forth by two servos working in parallel, in order for extra strength (shown in Car Base).
 
 <img src="Images/Claw_full_arm.png" alt="Claw_full_arm" width="400" height="130"/>
-
+#### Full Upper Arm
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This is the car base rendered in CAD, complete with screw holes, batter holders, motor mounts, servos, and switches.
 
 <img src="Images/Car_Base.png" alt="Car_Base" width="380" height="220"/>
-
+#### Car Base
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This is the completed car, arm, and claw rendered in CAD. It does not show the motors and belts because we could not find them in the parts folder we have access to.
 
 <img src="Images/Full_car.png" alt="Full_car" width="400" height="300"/>
-
+#### Completed Assembly
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Code
