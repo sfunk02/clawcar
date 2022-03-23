@@ -75,11 +75,6 @@ This is the completed car, arm, and claw rendered in CAD. It does not show the m
 
 ## Code
 
-## Building_the_Robot
-For the most part, assembling the final product was fairly straightforward. Mostly everything fit where it was supposed to go. We ran into a few problems, one of which was that the middle servo bracket cracked once screwed in, and we had to replace it. The second was that the arms were difficult to put together in the collar holding the claw, but we ended up resolving this by the end. We were able to slide the pieces together and leave one screw out without sacrificing any major durability.
-
-Additionally, we decided to replace the three 180 servos on the car base with stronger servos to better support the weight of the arm, and the microservo was also replaced 3 times, because of some glitches in the code.
-
 ``` python
 import pulseio
 import board
@@ -237,6 +232,11 @@ while True:
         pwm2.deinit()
         pwm3.deinit()
 ```
+
+## Building_the_Robot
+For the most part, assembling the final product was fairly straightforward. Mostly everything fit where it was supposed to go. We ran into a few problems, one of which was that the middle servo bracket cracked once screwed in, and we had to replace it. The second was that the arms were difficult to put together in the collar holding the claw, but we ended up resolving this by the end. We were able to slide the pieces together and leave one screw out without sacrificing any major durability.
+
+Additionally, we decided to replace the three 180 servos on the car base with stronger servos to better support the weight of the arm, and the microservo was also replaced 3 times, because of some glitches in the code.
 
 There was a struggle with getting the code for the claw microservo to work; the range of motion would always push the rod too far, breaking the servo.
 In order to fix this, we tested smaller ranges of motion, so if the code was faulty, it would not damage the mechanics.
