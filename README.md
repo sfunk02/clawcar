@@ -244,6 +244,6 @@ In order to fix this, we tested smaller ranges of motion, so if the code was fau
 ## Final_Product
 [Full Video](Images/Clawcarvideo1.mp4)
 
-<img src="Images/Clawcargif.gif" alt="Clawcargif" width="400" height="400"/>
+<img src="Images/Clawcargif.gif" alt="Clawcargif" width="600" height="600"/>
 
 
