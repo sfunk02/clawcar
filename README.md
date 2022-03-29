@@ -242,3 +242,4 @@ This was due to a struggle with getting the code for the claw microservo to work
 In order to fix this, we tested smaller ranges of motion, so if the code was faulty, it would not damage the mechanics.
 
 ## Final_Product
+[Final Video](Images/Clawcarvideo1.mp4)
