@@ -2,9 +2,9 @@
 import board
 import pulseio
 import adafruit_irremote
-import motor
+from adafruit_motor import motor
+from adafruit motor import servo
 import pwmio
-import servo
 import time
 
 
