@@ -7,6 +7,7 @@
 * [Code](#Code)
 * [Building the Robot](#Building_the_Robot)
 * [Final Product](#Final_Product)
+* [Project_Iterations](#Project_Iterations)
 
 ## Introduction
 For this project, we were assigned to create something that uses a robot arm. Our constraints consisted of 2 months of time and materials available in the lab or any materials that could be easily obtained. We had access to hardware, servos, motors, acrylic, a laser cutter, and 3D printers to create our robot.
@@ -125,7 +126,7 @@ In order to fix this, we tested smaller ranges of motion, so if the code was fau
 
 <img src="Images/Clawcargif.gif" alt="Clawcargif" width="600" height="600"/>
 
-## Project Iterations
+## Project_Iterations
 
 ### Hardware
 
