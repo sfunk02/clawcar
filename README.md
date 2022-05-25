@@ -24,7 +24,7 @@ Inital problems we faced in planning our project were deciding whether to contro
 
 ## CAD
 
-[Onshape Document](https://cvilleschools.onshape.com/documents/68aa0f638d08d1c7e2145037/w/4b7c45ff2284ca1a7005927c/e/dc6fd3a74e3c54772968f738)
+[Onshape Document](https://cvilleschools.onshape.com/documents/68aa0f638d08d1c7e2145037/w/4b7c45ff2284ca1a7005927c/e/ad726c20be8d60d7ba291cb8?renderMode=0&uiState=628e30d8a4cb37411039c9b7)
 
 #### Rack and Pinion
 
