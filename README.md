@@ -79,6 +79,87 @@ This is the completed car, arm, and claw rendered in CAD. It does not show the m
 
 ## Code
 
+#### The code below shows a shorter version for simplicity. For the full code, look at [Code version 1.0](clawcar1.0.py)
+
+``` python
+print('IR listener')
+def fuzzy_pulse_compare(pulse1, pulse2, fuzzyness=0.2):
+    if len(pulse1) != len(pulse2):
+        return False
+    for i in range(len(pulse1)):
+        threshold = int(pulse1[i] * fuzzyness)
+        if abs(pulse1[i] - pulse2[i]) > threshold:
+            return False
+    return True
+
+pulses = pulseio.PulseIn(IR_PIN, maxlen=200, idle_state=True)
+decoder = adafruit_irremote.GenericDecode()
+pulses.clear()
+pulses.resume()
+
+while True:
+    detected = decoder.read_pulses(pulses)
+    if fuzzy_pulse_compare(pu, detected):
+        print('up')
+        print("\nForwards slow")
+        A1 = board.D4
+        A2 = board.D5
+        pwmA1 = pwmio.PWMOut(A1, frequency=50)
+        pwmA2 = pwmio.PWMOut(A2, frequency=50)
+        motor1 = motor.DCMotor(pwmA1, pwmA2)
+        B1 = board.D7
+        B2 = board.D6
+        pwmB1 = pwmio.PWMOut(B1, frequency=50)
+        pwmB2 = pwmio.PWMOut(B2, frequency=50)
+        motor2 = motor.DCMotor(pwmB1, pwmB2)
+        motor1.throttle = 0.5
+        print("  throttle:", motor1.throttle)
+        motor2.throttle = 0.5
+        print("  throttle:", motor2.throttle)
+    if fuzzy_pulse_compare(pd, detected):
+        print('down')
+        print("\nBackwards")
+        A1 = board.D4
+        A2 = board.D5
+        pwmA1 = pwmio.PWMOut(A1, frequency=50)
+        pwmA2 = pwmio.PWMOut(A2, frequency=50)
+        motor1 = motor.DCMotor(pwmA1, pwmA2)
+        B1 = board.D7
+        B2 = board.D6
+        pwmB1 = pwmio.PWMOut(B1, frequency=50)
+        pwmB2 = pwmio.PWMOut(B2, frequency=50)
+        motor2 = motor.DCMotor(pwmB1, pwmB2)
+        motor1.throttle = -0.5
+        print("  throttle:", motor1.throttle)
+        motor2.throttle = -0.5
+        print("  throttle:", motor2.throttle)
+
+```
+
+
+
+## Building_the_Robot
+For the most part, assembling the final product was fairly straightforward. Mostly everything fit where it was supposed to go. We ran into a few problems, one of which was that the middle servo bracket cracked once screwed in, and we had to replace it. The second was that the arms were difficult to put together in the collar holding the claw, but we ended up resolving this by the end. We were able to slide the pieces together and leave one screw out without sacrificing any major durability.
+
+Additionally, we decided to replace the three 180 servos on the car base with stronger servos to better support the weight of the arm, and the microservo was also replaced 3 times, because it kept breaking.
+
+This was due to a struggle with getting the code for the claw microservo to work; the range of motion would always push the rod too far, breaking the servo.
+In order to fix this, we tested smaller ranges of motion, so if the code was faulty, it would not damage the mechanics.
+
+## Completed Version 1.0
+[Full Video](Images/Clawcarvideo1.mp4)
+
+<img src="Images/Clawcargif.gif" alt="Clawcargif" width="600" height="600"/>
+
+## Version 1.1
+
+### Updates to hardware
+
+* Tower Pro SG92R microservo broke, and was replaced.
+* CYS S3003 Servos were replaced with the Tiankongrc MG996R Servos. The new servos have metal components in order to provide greater torque, which allows smoother function of the arms.
+
+### Updates to Code
+Code was cleaned up for clarity: The previous version was very clunky and repetitive, but the function of the new version is identitical, apart from minor tweaks and bug fixes.
 
 #### The code below shows a basic function for one arm motion (button 1). For the full code, look at [Code version 1.1](clawcar1.1.py)
 
@@ -115,26 +196,9 @@ if fuzzy_pulse_compare(p1, detected):
 
 ```
 
+### 
 
-
-## Building_the_Robot
-For the most part, assembling the final product was fairly straightforward. Mostly everything fit where it was supposed to go. We ran into a few problems, one of which was that the middle servo bracket cracked once screwed in, and we had to replace it. The second was that the arms were difficult to put together in the collar holding the claw, but we ended up resolving this by the end. We were able to slide the pieces together and leave one screw out without sacrificing any major durability.
-
-Additionally, we decided to replace the three 180 servos on the car base with stronger servos to better support the weight of the arm, and the microservo was also replaced 3 times, because it kept breaking.
-
-This was due to a struggle with getting the code for the claw microservo to work; the range of motion would always push the rod too far, breaking the servo.
-In order to fix this, we tested smaller ranges of motion, so if the code was faulty, it would not damage the mechanics.
-
-## Final_Product
-[Full Video](Images/Clawcarvideo1.mp4)
-
-<img src="Images/Clawcargif.gif" alt="Clawcargif" width="600" height="600"/>
-
-## Project_Iterations
-
-### Hardware
-
-### Software
+### 
 
 
 
