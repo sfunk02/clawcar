@@ -125,4 +125,11 @@ In order to fix this, we tested smaller ranges of motion, so if the code was fau
 
 <img src="Images/Clawcargif.gif" alt="Clawcargif" width="600" height="600"/>
 
+## Project Iterations
+
+### Hardware
+
+### Software
+
+
 
