@@ -158,7 +158,7 @@ In order to fix this, we tested smaller ranges of motion, so if the code was fau
 * CYS S3003 Servos were replaced with the Tiankongrc MG996R Servos. The new servos have metal components in order to provide greater torque, which allows smoother function of the arms.
 
 ### Updates to Code
-Code was cleaned up for clarity: The previous version was very clunky and repetitive, but the function of the new version is identitical, apart from minor tweaks and bug fixes.
+Code was cleaned up for clarity; the previous version was very clunky and repetitive. The function of the updated code is identitical, apart from minor tweaks and bug fixes.
 
 #### The code below shows a basic function for one arm motion (button 1). For the full code, look at [Code version 1.1](clawcar1.1.py)
 
