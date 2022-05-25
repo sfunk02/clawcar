@@ -57,7 +57,7 @@ This image shows the upper arm and claw assembly, which includes a gear at the e
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### Car Base
-This is the car base rendered in CAD, complete with screw holes, batter holders, motor mounts, servos, and switches.
+This is the car base rendered in CAD, complete with screw holes, battery holders, motor mounts, servos, and switches.
 
 <img src="Images/Car_Base.png" alt="Car_Base" width="380" height="220"/>
 
