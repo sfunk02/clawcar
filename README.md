@@ -74,30 +74,16 @@ This is the completed car, arm, and claw rendered in CAD. It does not show the m
 
 ## Code
 
-``` python
-import pulseio
-import board
-import adafruit_irremote
-import motor
-import pwmio
-import servo
-import time
 
-IR_PIN = board.D2
-pu = [1171, 1009, 3292, 1022, 2206]
-pl = [1185, 975, 1157, 3185, 2211]
-pr = [1168, 1012, 2205, 2108, 2203]
-pd = [1179, 980, 1152, 1028, 1128, 1030, 2211]
-pok = [1146, 1011, 2207, 1030, 3288]
+#### The code below shows a basic function for one arm motion (button 1). For the full code, look at [Code version 1.1](clawcar1.1.py)
+
+``` python
 p1 = [1184, 977, 2239]
-p2 = [1173, 1008, 1124, 1034, 1122]
-p3 = [1185, 976, 3324]
-p4 = [1119, 1039, 1170, 2067, 1142]
-p5 = [1212, 970, 2227, 1011, 1140]
-p6 = [1089, 1096, 1056, 1103, 2163]
-p7 = [1200, 983, 4348]
-p8 = [1194, 988, 1145, 3168, 1144]
-servoDelay = .25
+
+pwm1 = pulseio.PWMOut(board.D10, frequency=50)
+myServo1 = servo.Servo(pwm1, min_pulse=750, max_pulse=2250)
+pwm2 = pulseio.PWMOut(board.D12, frequency=50)
+myServo2 = servo.Servo(pwm2, min_pulse=750, max_pulse=2250)
 
 print('IR listener')
 def fuzzy_pulse_compare(pulse1, pulse2, fuzzyness=0.2):
@@ -108,129 +94,23 @@ def fuzzy_pulse_compare(pulse1, pulse2, fuzzyness=0.2):
         if abs(pulse1[i] - pulse2[i]) > threshold:
             return False
     return True
-
+    
 pulses = pulseio.PulseIn(IR_PIN, maxlen=200, idle_state=True)
 decoder = adafruit_irremote.GenericDecode()
 pulses.clear()
 pulses.resume()
 
+if fuzzy_pulse_compare(p1, detected):
+       print('1')
+       myServo2.angle = 100
+       myServo1.angle = 10
+       time.sleep(servoDelay)
+       pwm1.deinit()
+       pwm2.deinit()    
 
-while True:
-    detected = decoder.read_pulses(pulses)
-    if fuzzy_pulse_compare(pu, detected):
-        print('up')
-        print("\nForwards slow")
-        A1 = board.D4
-        A2 = board.D5
-        pwmA1 = pwmio.PWMOut(A1, frequency=50)
-        pwmA2 = pwmio.PWMOut(A2, frequency=50)
-        motor1 = motor.DCMotor(pwmA1, pwmA2)
-        B1 = board.D7
-        B2 = board.D6
-        pwmB1 = pwmio.PWMOut(B1, frequency=50)
-        pwmB2 = pwmio.PWMOut(B2, frequency=50)
-        motor2 = motor.DCMotor(pwmB1, pwmB2)
-        motor1.throttle = 1
-        print("  throttle:", motor1.throttle)
-        motor2.throttle = .9
-        print("  throttle:", motor2.throttle)
-    if fuzzy_pulse_compare(pd, detected):
-        print('down')
-        print("\nBackwards")
-        A1 = board.D4
-        A2 = board.D5
-        pwmA1 = pwmio.PWMOut(A1, frequency=50)
-        pwmA2 = pwmio.PWMOut(A2, frequency=50)
-        motor1 = motor.DCMotor(pwmA1, pwmA2)
-        B1 = board.D7
-        B2 = board.D6
-        pwmB1 = pwmio.PWMOut(B1, frequency=50)
-        pwmB2 = pwmio.PWMOut(B2, frequency=50)
-        motor2 = motor.DCMotor(pwmB1, pwmB2)
-        motor1.throttle = -0.5
-        print("  throttle:", motor1.throttle)
-        motor2.throttle = -0.45
-        print("  throttle:", motor2.throttle)
-    if fuzzy_pulse_compare(pl, detected):
-        print('left')
-        A1 = board.D4
-        A2 = board.D5
-        pwmA1 = pwmio.PWMOut(A1, frequency=50)
-        pwmA2 = pwmio.PWMOut(A2, frequency=50)
-        motor1 = motor.DCMotor(pwmA1, pwmA2)
-        B1 = board.D7
-        B2 = board.D6
-        pwmB1 = pwmio.PWMOut(B1, frequency=50)
-        pwmB2 = pwmio.PWMOut(B2, frequency=50)
-        motor2 = motor.DCMotor(pwmB1, pwmB2)
-        motor1.throttle = 1
-    if fuzzy_pulse_compare(pr, detected):
-        print('right')
-        A1 = board.D4
-        A2 = board.D5
-        pwmA1 = pwmio.PWMOut(A1, frequency=50)
-        pwmA2 = pwmio.PWMOut(A2, frequency=50)
-        motor1 = motor.DCMotor(pwmA1, pwmA2)
-        B1 = board.D7
-        B2 = board.D6
-        pwmB1 = pwmio.PWMOut(B1, frequency=50)
-        pwmB2 = pwmio.PWMOut(B2, frequency=50)
-        motor2 = motor.DCMotor(pwmB1, pwmB2)
-        motor2.throttle = 1
-    if fuzzy_pulse_compare(pok, detected):
-        print('ok')
-        print("\nStop")
-        motor1.throttle = 0
-        print("  throttle:", motor1.throttle)
-        motor2.throttle = 0
-        print("  throttle:", motor2.throttle)
-        pwmA1.deinit()
-        pwmA2.deinit()
-        pwmB1.deinit()
-        pwmB2.deinit()
-# Write your code here :-)
-    if fuzzy_pulse_compare(p1, detected):
-        print('1')
-        pwm1 = pulseio.PWMOut(board.D10, frequency=50)
-        myServo1 = servo.Servo(pwm1, min_pulse=750, max_pulse=2250)
-        pwm2 = pulseio.PWMOut(board.D12, frequency=50)
-        myServo2 = servo.Servo(pwm2, min_pulse=750, max_pulse=2250)
-        myServo2.angle = 100
-        myServo1.angle = 10
-        time.sleep(servoDelay)
-        pwm3 = pulseio.PWMOut(board.D8, frequency=50)
-        myServo3 = servo.Servo(pwm3, min_pulse=750, max_pulse=2250)
-        myServo3.angle = 160
-        time.sleep(servoDelay)
-    if fuzzy_pulse_compare(p2, detected):
-        print('2')
-        myServo1.angle = 90
-        myServo2.angle = 20
-        time.sleep(servoDelay)
-        pwm1.deinit()
-        pwm4 = pulseio.PWMOut(board.D13, frequency=50)
-        myServo4 = servo.Servo(pwm4, min_pulse=750, max_pulse=2250)
-        myServo4.angle = 50
-        time.sleep(servoDelay)
-        myServo3.angle = 110
-    if fuzzy_pulse_compare(p3, detected):
-        print('3')
-        myServo4.angle = 115
-        time.sleep(servoDelay)
-        myServo3.angle = 160
-        pwm4.deinit()
-    if fuzzy_pulse_compare(p4, detected):
-        print('4')
-        time.sleep(servoDelay)
-        pwm1 = pulseio.PWMOut(board.D10, frequency=50)
-        myServo1 = servo.Servo(pwm1, min_pulse=750, max_pulse=2250)
-        myServo2.angle = 105
-        myServo1.angle = 5
-        time.sleep(servoDelay)
-        pwm1.deinit()
-        pwm2.deinit()
-        pwm3.deinit()
 ```
+
+
 
 ## Building_the_Robot
 For the most part, assembling the final product was fairly straightforward. Mostly everything fit where it was supposed to go. We ran into a few problems, one of which was that the middle servo bracket cracked once screwed in, and we had to replace it. The second was that the arms were difficult to put together in the collar holding the claw, but we ended up resolving this by the end. We were able to slide the pieces together and leave one screw out without sacrificing any major durability.
