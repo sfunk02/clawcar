@@ -1,3 +1,4 @@
+# Credit: lady ada, https://learn.adafruit.com/ir-sensor/circuitpython
 import board
 import pulseio
 import adafruit_irremote
