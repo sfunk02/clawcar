@@ -1,6 +1,7 @@
 # Clawcar Project
 
 ## Table of Contents
+* [Preface](#Preface)
 * [Introduction](#Introduction)
 * [Planning](#Planning_Stage)
 * [CAD](#CAD)
@@ -8,6 +9,9 @@
 * [Building the Robot](#Building_the_Robot)
 * [Final Product](#Final_Product)
 * [Project Iterations](#Project_Iterations)
+
+## Preface
+
 
 ## Introduction
 For this project, we were assigned to create something that uses a robot arm. Our constraints consisted of 2 months of time and materials available in the lab or any materials that could be easily obtained. We had access to hardware, servos, motors, acrylic, a laser cutter, and 3D printers to create our robot.
