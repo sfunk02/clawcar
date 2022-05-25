@@ -1,19 +1,7 @@
 # Clawcar Project
 
-## Table of Contents
-* [Preface](#Preface)
-* [Introduction](#Introduction)
-* [Planning](#Planning_Stage)
-* [CAD](#CAD)
-* [Code](#Code)
-* [Building the Robot](#Building_the_Robot)
-* [Final Product](#Final_Product)
-* [Project Iterations](#Project_Iterations)
-
 ## Preface
 
-
-## Introduction
 For this project, we were assigned to create something that uses a robot arm. Our constraints consisted of 2 months of time and materials available in the lab or any materials that could be easily obtained. We had access to hardware, servos, motors, acrylic, a laser cutter, and 3D printers to create our robot.
 
 ## Planning_Stage
@@ -133,6 +121,17 @@ while True:
         print("  throttle:", motor1.throttle)
         motor2.throttle = -0.5
         print("  throttle:", motor2.throttle)
+    if fuzzy_pulse_compare(p1, detected):
+        print('1')
+        pwm1 = pulseio.PWMOut(board.D10, frequency=50)
+        myServo1 = servo.Servo(pwm1, min_pulse=750, max_pulse=2250)
+        pwm2 = pulseio.PWMOut(board.D12, frequency=50)
+        myServo2 = servo.Servo(pwm2, min_pulse=750, max_pulse=2250)
+        myServo2.angle = 100
+        myServo1.angle = 10
+        time.sleep(servoDelay)
+        pwm1.deinit()
+        pwm2.deinit()
 
 ```
 
