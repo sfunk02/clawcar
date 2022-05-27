@@ -69,8 +69,7 @@ This is the completed car, arm, and claw rendered in CAD. It does not show the m
 
 #### The code below shows a shorter version for simplicity. For the full code, look at [Code version 1.0](clawcar1.0.py)
 The code works by reading pulses from an infrared remote. To find the pulse values of your remote, use 
-[this code] 
-(https://github.com/sfunk02/clawcar/blob/main/ircode.py) 
+[this code](https://github.com/sfunk02/clawcar/blob/main/ircode.py) 
 to find values to put in the beginning of your code as follows. Once you find oulse values and input them as an array at the beginning of your code, the pulse decoder should be able to read the remotes input and respond. This code uses a fuzzyness of .2 or 20% margin of error while reading pulses, and uses an if statement so if a button is hit, a motor or servo moves.
 ``` python
 p1 = [1184, 977, 2239]
