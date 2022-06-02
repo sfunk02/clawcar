@@ -148,7 +148,7 @@ Additionally, we decided to replace the three 180 servos on the car base with st
 This was due to a struggle with getting the code for the claw microservo to work; the range of motion would always push the rod too far, breaking the servo.
 In order to fix this, we tested smaller ranges of motion, so if the code was faulty, it would not damage the mechanics.
 
-## Completed Version 1.0
+## Version 1.0
 [Full Video](Images/Clawcarvideo1.mp4)
 
 <img src="Images/Clawcargif.gif" alt="Clawcargif" width="600" height="600"/>
@@ -193,14 +193,22 @@ if fuzzy_pulse_compare(p1, detected):
        myServo2.angle = 100
        myServo1.angle = 10
        time.sleep(servoDelay)
-       pwm1.deinit()
-       pwm2.deinit()    
 
 ```
 
-### 
+## Version 1.2
 
-### 
+### Updates to Hardware
+* Adafruit Metroexpress M0 board was replaced with a newer, sleeker, more efficient, extravagant, M4 deluxe board, in hopes of quintessentializing, that is, extracting the engineering experience as a whole.
+
+### Updates to code
+#### 
+
+```
+
+```
+
+###
 
 
 
