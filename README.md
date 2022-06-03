@@ -200,6 +200,7 @@ if fuzzy_pulse_compare(p1, detected):
 
 ### Updates to Hardware
 * Adafruit Metroexpress M0 board was replaced with a newer, sleeker, more efficient, extravagant, M4 deluxe board, in hopes of quintessentializing, that is, extracting the engineering experience as a whole.
+<img src="Images/metro_m4_express.png" alt="Car_Base" width="400" height="300"/>
 
 ### Updates to code
 #### Instead of a set position for the claw arms, buttons 1 and 2 move the lower arms 8 degrees and the upper arm 5 degrees, respectively:
@@ -254,7 +255,29 @@ Using for loops and short delays, we were able to make the arms move smoothly, i
         myServo2.angle = 140
 ```
 
-###
+## Version 1.3
 
+### Updates to Code
+#### In order to add more functionality to the arms, button 7 was added to shift the lower arms backwards, and button 8 was added to shift the the upper arm up. Buttons 4 and 5 became reset buttons to bring the arms back to a central position within their ranges. Limits to range of motion were also set in the code to prevent damage to the servos and robot. 
 
+[clawcar1.3](clawcar1.3.py)
+``` python
+if fuzzy_pulse_compare(p7, detected) and myServo1.angle > 39:       #Moves lower arms backward
+        print('7')
+        print(myServo1.angle)
+        servo1angle = myServo1.angle
+        servo2angle = myServo2.angle
+        for i in range(1, 9):
+            myServo1.angle = servo1angle - i
+            myServo2.angle = servo2angle + i
+            time.sleep(.02)
+            print(myServo1.angle)
 
+  if fuzzy_pulse_compare(p8, detected) and myServo3.angle < 100: #Moves upper arm up
+        print('8')
+        servo3angle = myServo3.angle
+        for i in range(1, 6):
+            myServo3.angle = servo3angle + i
+            time.sleep(.02)
+            print(myServo3.angle)
+```
