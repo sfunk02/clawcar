@@ -261,7 +261,8 @@ Using for loops and short delays, we were able to make the arms move smoothly, i
 ### Updates to Code
 #### In order to add more functionality to the arms, button 7 was added to shift the lower arms backwards, and button 8 was added to shift the the upper arm up. Buttons 4 and 5 became reset buttons to bring the arms back to a central position within their ranges. Limits to range of motion were also set in the code to prevent damage to the servos and robot. 
 
-[clawcar1.3](clawcar1.3.py)
+For the full code, look at [clawcar1.3](clawcar1.3.py)
+
 ``` python
 if fuzzy_pulse_compare(p7, detected) and myServo1.angle > 39:       #Moves lower arms backward
         print('7')
@@ -282,3 +283,7 @@ if fuzzy_pulse_compare(p7, detected) and myServo1.angle > 39:       #Moves lower
             time.sleep(.02)
             print(myServo3.angle)
 ```
+
+### Final Video Version 1.3
+
+The gif below is a shortened version of the [this video](https://drive.google.com/file/d/1yc7jsVMo7K_kxY04Kl_FqgLQQQhmPg1e/view?usp=sharing)
