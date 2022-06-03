@@ -202,10 +202,56 @@ if fuzzy_pulse_compare(p1, detected):
 * Adafruit Metroexpress M0 board was replaced with a newer, sleeker, more efficient, extravagant, M4 deluxe board, in hopes of quintessentializing, that is, extracting the engineering experience as a whole.
 
 ### Updates to code
-#### 
+#### Instead of a set position for the claw arms, buttons 1 and 2 move the lower arms 8 degrees and the upper arm 5 degrees, respectively:
 
 ```
+if fuzzy_pulse_compare(p1, detected):
+        print('1')
+        print(myServo1.angle)
+        servo1angle = myServo1.angle
+        servo2angle = myServo2.angle
+        for i in range(1, 9):
+            myServo1.angle = servo1angle + i
+            myServo2.angle = servo2angle - i
+            time.sleep(.02)
+            print(myServo1.angle)
+            
+  if fuzzy_pulse_compare(p2, detected) and myServo3.angle > 0:
+        print('2')
+        servo3angle = myServo3.angle
+        for i in range(1, 6):
+            myServo3.angle = servo3angle - i
+            time.sleep(.02)
+            print(myServo3.angle)
+```
+Using for loops and short delays, we were able to make the arms move smoothly, instead of a jerky motion. 
 
+
+#### For loops were added to buttons 3 and 6 as well, in order to smooth out the motion for opening and closing the claw, as shown below:
+```
+ if fuzzy_pulse_compare(p3, detected):       #Opens claw
+        print('3')
+        servo4angle = myServo4.angle
+        for i in range(int(servo4angle), 160):
+            myServo4.angle = i
+            time.sleep(.01)
+        print(myServo4.angle)
+    if fuzzy_pulse_compare(p6, detected):       #Closes claw
+        print('6')
+        servo6angle = myServo4.angle
+        for i in range(int(servo6angle), 100, -1):
+            myServo4.angle = i
+            time.sleep(.01)
+        print(myServo4.angle)
+```
+
+#### Lastly, a button 9 was added in order to reset the position of the claw to a resting position:
+```
+ if fuzzy_pulse_compare(p9, detected):       #Resets arms
+        print('9')
+        myServo3.angle = 60
+        myServo1.angle = 40
+        myServo2.angle = 140
 ```
 
 ###
