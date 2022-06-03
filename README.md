@@ -6,7 +6,7 @@ For this project, we were assigned to create something that uses a robot arm. Ou
 
 ## Planning_Stage
 
-[Planning Document](https://docs.google.com/document/d/18APe1ReYu_2JsjmeK-9Reznoc6AoXzXg0CE4DWNOTgk/edit?usp=sharing)
+[Planning Document](https://docs.google.com/document/d/1ei37qh1YpQfnkpyn8oZVm5NDwRILH8QgU1YR3Fg95Ng/edit?usp=sharing)
 
 Inital problems we faced in planning our project were deciding whether to control the car via Bluetooth or an infrared universal TV remote. We also didn't know whether we wanted to use a SCARA arm or an articulated arm. We ended up choosing infrared over Bluetooth because Bluetooth seemed overly complicated and unnecessary for what we were trying to achieve, and we chose an articulated arm over a SCARA arm because a SCARA arm didn't seem like it would be strong enough to lift anything vertically while also moving horizontally. 
 
@@ -204,7 +204,7 @@ if fuzzy_pulse_compare(p1, detected):
 ### Updates to code
 #### Instead of a set position for the claw arms, buttons 1 and 2 move the lower arms 8 degrees and the upper arm 5 degrees, respectively:
 
-```
+``` python
 if fuzzy_pulse_compare(p1, detected):
         print('1')
         print(myServo1.angle)
@@ -228,7 +228,7 @@ Using for loops and short delays, we were able to make the arms move smoothly, i
 
 
 #### For loops were added to buttons 3 and 6 as well, in order to smooth out the motion for opening and closing the claw, as shown below:
-```
+``` python
  if fuzzy_pulse_compare(p3, detected):       #Opens claw
         print('3')
         servo4angle = myServo4.angle
@@ -246,7 +246,7 @@ Using for loops and short delays, we were able to make the arms move smoothly, i
 ```
 
 #### Lastly, a button 9 was added in order to reset the position of the claw to a resting position:
-```
+``` python
  if fuzzy_pulse_compare(p9, detected):       #Resets arms
         print('9')
         myServo3.angle = 60
