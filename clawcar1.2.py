@@ -111,7 +111,7 @@ while True:
         myServo2.angle = 80
         myServo1.angle = 100
 
-    if fuzzy_pulse_compare(p2, detected) and myServo3.angle < 90:
+    if fuzzy_pulse_compare(p2, detected) and myServo3.angle > 0:
         print('2')
         servo3angle = myServo3.angle
         for i in range(1, 6):
@@ -123,7 +123,7 @@ while True:
         myServo3.angle = 60
         print(myServo3.angle)
 
-    if fuzzy_pulse_compare(p3, detected) and myServo4:       #Opens claw
+    if fuzzy_pulse_compare(p3, detected):       #Opens claw
         print('3')
         servo4angle = myServo4.angle
         for i in range(int(servo4angle), 160):
