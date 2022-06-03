@@ -201,6 +201,7 @@ if fuzzy_pulse_compare(p1, detected):
 ### Updates to Hardware
 * Adafruit Metroexpress M0 board was replaced with a newer, sleeker, more efficient, extravagant, M4 deluxe board, in hopes of quintessentializing, that is, extracting the engineering experience as a whole.
 <img src="Images/metro_m4_express.jpg" alt="metro_M4" width="400" height="300"/>
+This new board boasts more timers, eliminating our previous problem of running out of timers to run servos/motors on PWM. This gave the clawcar the ability to use all of its motors and servos at the same time, without deinitializing any of them.
 
 ### Updates to code
 #### Instead of a set position for the claw arms, buttons 1 and 2 move the lower arms 8 degrees and the upper arm 5 degrees, respectively:
