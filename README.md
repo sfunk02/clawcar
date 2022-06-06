@@ -2,7 +2,7 @@
 
 ## Preface
 
-In November of 2021, my Engineering 3 class at Charlottesville High School was given the assignment “Build a robot arm.” Our constraints consisted of 2 months of time and materials available in the lab or any materials that could be easily obtained. We had access to hardware, servos, motors, acrylic, a laser cutter, and 3D printers to create our robot. 
+In November of 2021, my Engineering 3 class at Charlottesville High School was given the assignment “Build a robot arm.” Our constraints consisted of 3 months of time and materials available in the lab or any materials that could be easily obtained. We had access to hardware, servos, motors, acrylic, a laser cutter, and 3D printers to create our robot. 
 
 After the project was announced, we were given a class period to brainstorm ideas for the project and figure out who we wanted to work with. My idea for a car with a robot arm on top of it intersected with the ideas of two of my classmates: Asher and Frank. 
 
