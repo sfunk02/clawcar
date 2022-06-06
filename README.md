@@ -259,7 +259,7 @@ Using for loops and short delays, we were able to make the arms move smoothly, i
 ## Version 1.3
 
 ### Updates to Code
-#### In order to add more functionality to the arms, button 7 was added to shift the lower arms backwards, and button 8 was added to shift the the upper arm up. Buttons 4 and 5 became reset buttons to bring the arms back to a central position within their ranges. Limits to range of motion were also set in the code to prevent damage to the servos and robot. 
+##### In order to add more functionality to the arms, button 7 was added to shift the lower arms backwards, and button 8 was added to shift the the upper arm up. Buttons 4 and 5 became reset buttons to bring the arms back to a central position within their ranges. Limits to range of motion were also set in the code to prevent damage to the servos and robot. 
 
 For the full code, look at [clawcar1.3](clawcar1.3.py)
 
