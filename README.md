@@ -21,7 +21,7 @@ Cheers, Sam Funk
 
 Our initial idea was to make an claw arm atop a bluetooth keyboard and mouse controlled car. Sketches of the claw-car contraption, as well as a more detailed view of the claw, are shown below. The car was designed with a circular rotating platform controlled by a servo, as well as 3 servos to control the motion of the arms, one of which was connected to a belt. One additional servo was planned to be on the upper arm to open and close the claw via a rotating slotted hinge.
 
-#### This [planning document](https://docs.google.com/document/d/1ei37qh1YpQfnkpyn8oZVm5NDwRILH8QgU1YR3Fg95Ng/edit?usp=sharing) shows a more detailed overview of our project idea:
+#### This [planning document](https://docs.google.com/document/d/1ei37qh1YpQfnkpyn8oZVm5NDwRILH8QgU1YR3Fg95Ng/edit?usp=sharing) shows a more detailed overview of our project idea, including a bill of materials:
 
 <img src="Images/Clawcar-sketch.png" alt="Clawcar-sketch.png" width="500" height="300"/> <img src="Images/Claw-sketch.png" alt="Claw-sketch.png" width="500" height="300"/>
 
