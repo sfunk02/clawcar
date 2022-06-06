@@ -2,7 +2,20 @@
 
 ## Preface
 
-For this project, we were assigned to create something that uses a robot arm. Our constraints consisted of 2 months of time and materials available in the lab or any materials that could be easily obtained. We had access to hardware, servos, motors, acrylic, a laser cutter, and 3D printers to create our robot.
+In November of 2021, my Engineering 3 class at Charlottesville High School was given the assignment “Build a robot arm.” Our constraints consisted of 2 months of time and materials available in the lab or any materials that could be easily obtained. We had access to hardware, servos, motors, acrylic, a laser cutter, and 3D printers to create our robot. 
+
+After the project was announced, we were given a class period to brainstorm ideas for the project and figure out who we wanted to work with. My idea for a car with a robot arm on top of it intersected with the ideas of two of my classmates: Asher and Frank. 
+
+Initially, our engineering teacher warned us against working in a group of three, claiming that every group of three he had seen in the past was unsuccessful due to one person not doing their fair share of work. However, we figured out how to break down the workload of our project during the planning stage, and split it evenly between all three of us throughout the project. 
+
+Asher started by designing the claw on our CAD program Onshape, Frank started by drafting code for an infrared remote and servo control, and I started by designing the base of the car in CAD. As the project developed over time, we were able to work more closely together and begin combining the three aspects of the project.
+
+Eventually, we ended up with a project that worked decently well, however, it was not as good as we wanted it to be. We were given an additional month of time at the end of the school year in which we made several updated iterations to the code and hardware of the clawcar. These iterations, as well as videos of the robot working can be found at the end of our documentation.
+
+Cheers, Sam Funk
+
+6-6-22
+
 
 ## Planning_Stage
 
