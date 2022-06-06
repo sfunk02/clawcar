@@ -288,7 +288,7 @@ if fuzzy_pulse_compare(p7, detected) and myServo1.angle > 39:       #Moves lower
 
 The GIF below is a shortened version of [This Video](https://drive.google.com/file/d/1yc7jsVMo7K_kxY04Kl_FqgLQQQhmPg1e/view?usp=sharing)
 
-[Gif](Clawcar1.3gif.gif)
+<img src="Images/Clawcar1.3gif.gif" alt="Clawcar1.3gif" width="600" height="350"/>
 
 Click the link above, and download the Google Drive file to view.
 
