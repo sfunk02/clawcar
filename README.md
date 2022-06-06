@@ -19,9 +19,15 @@ Cheers, Sam Funk
 
 ## Planning_Stage
 
-[Planning Document](https://docs.google.com/document/d/1ei37qh1YpQfnkpyn8oZVm5NDwRILH8QgU1YR3Fg95Ng/edit?usp=sharing)
+Our initial idea was to make an claw arm atop a bluetooth keyboard and mouse controlled car. Sketches of the claw-car contraption, as well as a more detailed view of the claw, are shown below. The car was designed with a circular rotating platform controlled by a servo, as well as 3 servos to control the motion of the arms, one of which was connected to a belt. One additional servo was planned to be on the upper arm to open and close the claw via a rotating slotted hinge.
 
-Inital problems we faced in planning our project were deciding whether to control the car via Bluetooth or an infrared universal TV remote. We also didn't know whether we wanted to use a SCARA arm or an articulated arm. We ended up choosing infrared over Bluetooth because Bluetooth seemed overly complicated and unnecessary for what we were trying to achieve, and we chose an articulated arm over a SCARA arm because a SCARA arm didn't seem like it would be strong enough to lift anything vertically while also moving horizontally. 
+#### This [planning document](https://docs.google.com/document/d/1ei37qh1YpQfnkpyn8oZVm5NDwRILH8QgU1YR3Fg95Ng/edit?usp=sharing) shows a more detailed overview of our project idea:
+
+<img src="Images/Clawcar-sketch.png" alt="Clawcar-sketch.png" width="500" height="300"/> <img src="Images/Claw-sketch.png" alt="Claw-sketch.png" width="500" height="300"/>
+
+
+
+Inital problems we faced in planning our project were deciding whether to control the car via Bluetooth or an infrared universal TV remote. We also didn't know whether we wanted to use a SCARA arm or an articulated arm. We ended up choosing infrared over Bluetooth because Bluetooth seemed overly complicated and unnecessary for what we were trying to achieve, and we chose an articulated arm over a SCARA arm because a SCARA arm didn't seem like it would be strong enough to lift anything vertically while also moving horizontally. Also, we decided against a slotted hinge to push the rod, as a rack and pinion was easier and seemed more effective at reducing friction. Lastly, we decided against the rotating platform on the base, because it was somewhat unnecessary and would cause future problems with design.
 
 ## CAD
 
