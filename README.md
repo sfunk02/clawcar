@@ -35,7 +35,7 @@ Inital problems we faced in planning our project were deciding whether to contro
 
 #### Rack and Pinion
 
-The first piece of this CAD project was to design a rack and pinion for the claw to open and close with a single 180 micro-servo. In order to create it, I used a spur gear function on Onshape, and then designed a gear rack off of the geometry of the gear. Using a rack and pinion mate allowed the gear to turn while the rack moved back and forth. Lastly, walls to mount the rack onto were designed, with a hole on one side to connect the servo.
+The first piece of this CAD project was to design a rack and pinion for the claw to open and close with a single 180 micro-servo. In order to create it, we used a spur gear function on Onshape, and then designed a gear rack off of the geometry of the gear. Using a rack and pinion mate allowed the gear to turn while the rack moved back and forth. Lastly, walls to mount the rack onto were designed, with a hole on one side to connect the servo.
 
 <img src="Images/RackandPinion.png" alt="RackandPinion" width="400" height="150"/>
 
@@ -44,7 +44,7 @@ The first piece of this CAD project was to design a rack and pinion for the claw
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### Claw Fingers
-The next piece of the project was designing the claw fingers, which are pieces of gear with curved grab fingers (Shown below). These fingers have gears on the back end, which connect to a cylindrical gear rack on the end of the rack and pinion assembly. This was designed after a wine bottle opener.
+The next piece of the project was designing the claw fingers, which are pieces of gear with curved grab fingers (Shown below). These fingers have gears on the back end, which connect to a cylindrical gear rack on the end of the rack and pinion assembly. This was designed after the mechanics of a wine bottle opener.
 
 <img src="Images/ClawFingers.png" alt="ClawFingers" width="250" height="450"/> <img src="Images/BottleOpener180.png" alt="BottleOpener" width="450" height="450"/>
 
