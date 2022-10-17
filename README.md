@@ -13,6 +13,7 @@ Asher started by designing the claw on our CAD program Onshape, Frank started by
 Eventually, we ended up with a project that worked decently well, however, it was not as good as we wanted it to be. We were given an additional month of time at the end of the school year in which we made several updated iterations to the code and hardware of the clawcar. These iterations, as well as videos of the robot working can be found at the end of our documentation.
 
 Cheers, 
+
 Sam Funk
 
 6-6-22
